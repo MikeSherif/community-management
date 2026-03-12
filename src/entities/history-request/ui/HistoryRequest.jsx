@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './HistoryRequest.module.css'
+import {HistoryRequestMessageIcon} from "@/shared/ui/icons.jsx";
 
 const HistoryRequest = () => {
     return (
@@ -40,6 +41,16 @@ const HistoryRequest = () => {
                     </p>
                 </div>
                 <div className={styles.request__footer}>
+                    <div className={styles.request__footer_wrapper}>
+                        <HistoryRequestMessageIcon/>
+                        <span className={styles.request__footer_text}>Последнее</span>
+                        <span className={styles.request__footer_text}>•</span>
+                    </div>
+                    <div className={styles.request__footer_text_wrapper}>
+                        <span className={styles.request__footer_text}>
+                        Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает соср...
+                    </span>
+                    </div>
 
                 </div>
             </article>

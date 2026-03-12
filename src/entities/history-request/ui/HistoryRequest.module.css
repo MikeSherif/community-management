@@ -64,3 +64,30 @@
     margin-left: auto;
     color: #56595F66;
 }
+
+.request__footer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.request__footer_wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.request__footer_text {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 13px;
+    vertical-align: middle;
+    color: #56595F99;
+}
+
+.request__footer_text_wrapper {
+    width: 100%;
+    max-width: 300px;
+}

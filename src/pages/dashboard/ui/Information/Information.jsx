@@ -30,21 +30,21 @@ const Information = () => {
                             <span className={styles.information__news_label}>Новость · 10 сен 2025</span>
                             <h3 className={styles.information__news_title}>Заголовок новости может быть как в два, так и в три ряда</h3>
                         </div>
-                        <img className={styles.information__news_image} src="/assets/img/news.png" alt="Картинка новостей"/>
+                        <img className={styles.information__news_image} src="assets/img/news.png" alt="Картинка новостей"/>
                     </li>
                     <li className={styles.information__news}>
                         <div className={styles.information__news_wrapper}>
                             <span className={styles.information__news_label}>Новость · 10 сен 2025</span>
                             <h3 className={styles.information__news_title}>Заголовок новости может быть как в два, так и в три ряда</h3>
                         </div>
-                        <img className={styles.information__news_image} src="/assets/img/news.png" alt="Картинка новостей"/>
+                        <img className={styles.information__news_image} src="assets/img/news.png" alt="Картинка новостей"/>
                     </li>
                     <li className={styles.information__news}>
                         <div className={styles.information__news_wrapper}>
                             <span className={styles.information__news_label}>Новость · 10 сен 2025</span>
                             <h3 className={styles.information__news_title}>Заголовок новости может быть как в два, так и в три ряда</h3>
                         </div>
-                        <img className={styles.information__news_image} src="/assets/img/news.png" alt="Картинка новостей"/>
+                        <img className={styles.information__news_image} src="assets/img/news.png" alt="Картинка новостей"/>
                     </li>
 
                 </ul>
