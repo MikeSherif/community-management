@@ -16,5 +16,51 @@
     line-height: 25.5px;
     letter-spacing: 0;
     vertical-align: middle;
+}
 
+.request__body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.request__status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    padding: 5px 15px;
+    background: #6BA9EF;
+
+    color: #FFFFFF;
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 14px;
+    leading-trim: NONE;
+    letter-spacing: 0;
+    vertical-align: middle;
+
+}
+
+.request__manager {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.request__manager_role, .request__manager_name, .request__date {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0;
+    vertical-align: middle;
+    color: #56595F99;
+}
+
+.request__date {
+    margin-left: auto;
+    color: #56595F66;
 }

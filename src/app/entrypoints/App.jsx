@@ -13,6 +13,7 @@ function App() {
 
                 {/* Все защищённые страницы — с общим layout */}
                 <Route element={<AppLayout />}>
+                    <Route path="*" element={<Dashboard />} />
                     <Route path="/" element={<Dashboard />} />
                     <Route path="/monitor" element={<Dashboard />} />
                 </Route>
