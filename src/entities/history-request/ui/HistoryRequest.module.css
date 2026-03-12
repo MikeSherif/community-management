@@ -1,0 +1,20 @@
+.request {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: #FFFFFF;
+    border-radius: 30px;
+    padding: 25px 30px;
+}
+
+.request__header_text {
+    color: #56595F;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 17px;
+    leading-trim: NONE;
+    line-height: 25.5px;
+    letter-spacing: 0;
+    vertical-align: middle;
+
+}

@@ -5,7 +5,7 @@ import Hero from "@/pages/dashboard/ui/Hero/Hero.jsx";
 
 const Dashboard = () => {
     return (
-        <section className="dashboard">
+        <section className={styles.dashboard}>
             <Hero/>
             <Information />
         </section>

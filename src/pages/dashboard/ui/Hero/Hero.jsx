@@ -1,4 +1,5 @@
 import React from 'react';
+import History from "@/pages/dashboard/ui/History/History.jsx";
 import styles from './Hero.module.css'
 const Hero = () => {
     return (
@@ -26,14 +27,8 @@ const Hero = () => {
 
                     </div>
                 </div>
-                <div className={styles.hero__history}>
-                    <div className={styles.history__header}>
+                <History/>
 
-                    </div>
-                    <ul className={styles.history__list}>
-
-                    </ul>
-                </div>
             </div>
             <div className={styles.hero__right}>
 
