@@ -1,3 +1,3 @@
-import Aside from './ui/aside'
+import Aside from './ui/Aside.jsx'
 
 export default Aside
