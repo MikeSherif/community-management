@@ -1,6 +1,7 @@
 import React from 'react';
 import History from "@/pages/dashboard/ui/History/History.jsx";
 import styles from './Hero.module.css'
+import Debt from "@/widgets/debt/ui/Debt.jsx";
 const Hero = () => {
     return (
         <div className={styles.hero}>
@@ -31,7 +32,9 @@ const Hero = () => {
 
             </div>
             <div className={styles.hero__right}>
-
+                <Debt/>
+                <Debt/>
+                <Debt/>
             </div>
         </div>
     );

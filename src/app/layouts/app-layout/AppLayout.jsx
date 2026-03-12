@@ -7,16 +7,19 @@ import styles from "./AppLayout.module.css";
 
 export function AppLayout() {
     return (
-        <div className={styles.wrapper}>
-            <Aside />
+        <>
+            <div className={styles.wrapper}>
+                <Aside/>
 
-            <div className={styles.rightColumn}>
-                <Header />
-                <main className={styles.main}>
-                    <Outlet />
-                </main>
-                <Footer />
+                <div className={styles.rightColumn}>
+                    <Header/>
+                    <main className={styles.main}>
+                        <Outlet/>
+                    </main>
+
+                </div>
             </div>
-        </div>
+            <Footer/>
+        </>
     );
 }

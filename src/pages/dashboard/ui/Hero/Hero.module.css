@@ -13,6 +13,12 @@
 
 .hero__right {
     grid-column: span 4;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #EDEDED;
+    border-radius: 55px;
 }
 
 .actions {

@@ -1,0 +1,81 @@
+.debt {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 35px;
+    background: #F3F4F680;
+    padding: 30px 25px;
+}
+
+.debt__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.debt__text_wrapper {
+    max-width: 150px;
+    width: 100%;
+}
+
+.debt__header_text {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: 0;
+    vertical-align: middle;
+    color: #242222;
+}
+
+.debt__footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.debt__status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 15px;
+    background: #FC0F0F;
+    border-radius: 16px;
+
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 14px;
+    vertical-align: middle;
+    color: #fff;
+}
+
+.debt__tabs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    background: #fff;
+    padding: 8px;
+    border-radius: 26px;
+}
+
+.debt__tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 15px;
+    border-radius: 18px;
+
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 16px;
+    text-align: center;
+    vertical-align: middle;
+    color: #111;
+    cursor: pointer;
+}
+
+.debt__tab.active {
+    background: #289D68;
+    color: #fff;
+}
