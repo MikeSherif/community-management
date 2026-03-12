@@ -1,0 +1,15 @@
+.message {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.message__name {
+    color: #56595F80;
+    font-family: Tilda Sans VF;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    vertical-align: middle;
+}

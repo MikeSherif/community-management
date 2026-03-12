@@ -1,0 +1,35 @@
+.notification {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+.notification__count {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #FF6D6D;
+    padding: 2px 5px;
+}
+
+.notification__value {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: center;
+    vertical-align: middle;
+    color: #FFFFFF;
+}
+
+.notification__name {
+    color: #56595F80;
+    font-family: Tilda Sans VF;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    vertical-align: middle;
+}

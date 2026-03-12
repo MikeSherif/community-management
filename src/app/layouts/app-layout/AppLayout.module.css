@@ -1,0 +1,12 @@
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.rightColumn {
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+}

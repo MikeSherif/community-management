@@ -1,0 +1,16 @@
+.details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+    padding: 10px 15px;
+    border: 1px solid #DBDBDB;
+    border-radius: 27px;
+}
+
+.details__wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}

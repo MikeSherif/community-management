@@ -1,0 +1,31 @@
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 25px 30px 25px 0;
+}
+
+.header__title {
+    font-family: Tilda Sans VF;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38.4px;
+    vertical-align: middle;
+    color: #56595F;
+}
+
+.header__controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+}
+
+@media (max-width: 1200px) {
+    .header__controls {
+        gap: 20px;
+    }
+}

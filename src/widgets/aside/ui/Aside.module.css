@@ -1,0 +1,55 @@
+.aside {
+    width: 350px;
+    background-color: #FEFAF1;
+    border-top-right-radius: 55px;
+    border-bottom-right-radius: 55px;
+    padding: 35px 45px
+}
+
+.aside__header {
+    padding-left: 50px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.nav {
+ padding-left: 50px;
+}
+
+.nav__list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: flex-end;
+}
+
+.nav__el {
+
+}
+
+.nav__link, .btn__logout {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    border-radius: 26.5px;
+
+    color: #62675D;
+
+    font-family: Tilda Sans VF;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 27px;
+    vertical-align: middle;
+
+
+    padding: 20px;
+}
+
+.nav__link:hover, .btn__logout:hover {
+    color: white;
+    background-color: #505D54;
+}
