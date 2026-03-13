@@ -1,0 +1,140 @@
+.burgerButton {
+    padding: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 50;
+    position: relative;
+}
+
+.burgerLines {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.line {
+    width: 24px;
+    height: 2px;
+    background-color: #1f2937; /* gray-800 */
+    border-radius: 9999px;
+    transition: all 0.3s ease-in-out;
+}
+
+.lineTopActive {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.lineMiddleActive {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.lineBottomActive {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Оверлей */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    z-index: 40;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+.overlayActive {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Боковое меню */
+.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100dvw;
+    max-width: 360px;
+    background-color: #FEFAF1;
+    box-shadow: -10px 0 25px -5px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+    z-index: 45;
+}
+
+.menuActive {
+    transform: translateX(0);
+}
+
+.menuHeader {
+    padding: 40px 24px 16px;
+    border-bottom: 1px solid rgba(75, 85, 99, 0.3);
+}
+
+.menuTitle {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #111827;
+}
+
+.nav {
+    padding: 40px 40px 0;
+}
+
+.navList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.navLink {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 26.5px;
+    color: #62675D;
+    font-family: "Tilda Sans VF", system-ui, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 27px;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.navLink:hover {
+    color: white;
+    background-color: #505D54;
+}
+
+.logoutButton {
+    margin-top: 32px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 26.5px;
+    color: #62675D;
+    font-family: "Tilda Sans VF", system-ui, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 27px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.logoutButton:hover {
+    color: white;
+    background-color: #505D54;
+}

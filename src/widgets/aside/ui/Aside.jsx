@@ -13,73 +13,83 @@ import {
     ContactIcon,
     LogoIcon, LogoText,
 } from "@/shared/ui/icons.jsx";
+import Burger from "@/widgets/burger";
+import {useMediaQuery} from "react-responsive";
 
 const Aside = () => {
+    const isMobile = useMediaQuery({ maxWidth: 992 });
     return (
-        <aside className={styles.aside}>
-            <div className={styles.aside__header}>
-                <LogoIcon/>
-                <LogoText/>
-            </div>
-            <nav className={styles.nav}>
-                <ul className={styles.nav__list}>
-                    <li className={styles.nav__el}>
-                        <Link to="/" className={styles.nav__link}>
-                            <MonitorIcon></MonitorIcon>
-                            Монитор
-                        </Link>
-                    </li>
-                    <li className={styles.nav__el}>
-                        <Link to="/" className={styles.nav__link}>
-                            <MyRequestsIcon/>
+        <>
+            {!isMobile && (
+                <aside className={styles.aside}>
+                    <div className={styles.aside__header}>
+                        <LogoIcon/>
+                        <LogoText/>
+                    </div>
+                    <nav className={styles.nav}>
+                        <ul className={styles.nav__list}>
+                            <li className={styles.nav__el}>
+                                <Link to="/" className={styles.nav__link}>
+                                    <MonitorIcon></MonitorIcon>
+                                    Монитор
+                                </Link>
+                            </li>
+                            <li className={styles.nav__el}>
+                                <Link to="/" className={styles.nav__link}>
+                                    <MyRequestsIcon/>
 
-                            Мои заявки
-                        </Link>
-                    </li>
-                    <li className={styles.nav__el}>
-                        <Link to="/" className={styles.nav__link}>
-                            <PersonalAccountIcon/>
+                                    Мои заявки
+                                </Link>
+                            </li>
+                            <li className={styles.nav__el}>
+                                <Link to="/" className={styles.nav__link}>
+                                    <PersonalAccountIcon/>
 
-                            Лицевой счет
-                        </Link>
-                    </li>
-                    <li className={styles.nav__el}>
-                        <Link to="/" className={styles.nav__link}>
-                            <DocumentsIcon/>
-                            Документы
-                        </Link>
-                    </li>
-                    <li className={styles.nav__el}>
-                        <Link to="/" className={styles.nav__link}>
-                            <ConciergeServiceIcon/>
-                            Консьерж сервис
-                        </Link>
-                    </li>
-                    <li className={styles.nav__el}>
-                        <Link to="/" className={styles.nav__link}>
-                            <QuizIcon/>
-                            Опросы
-                        </Link>
-                    </li>
-                    <li className={styles.nav__el}>
-                        <Link to="/" className={styles.nav__link}>
-                            <ProfileIcon/>
-                            Профиль
-                        </Link>
-                    </li>
-                    <li className={styles.nav__el}>
-                        <Link to="/" className={styles.nav__link}>
-                            <ContactIcon/>
-                            Контакты
-                        </Link>
-                    </li>
-                </ul>
-                <button className={styles.btn__logout}>
-                    <LogoutIcon/>
-                    Выйти
-                </button>
-            </nav>
-        </aside>
+                                    Лицевой счет
+                                </Link>
+                            </li>
+                            <li className={styles.nav__el}>
+                                <Link to="/" className={styles.nav__link}>
+                                    <DocumentsIcon/>
+                                    Документы
+                                </Link>
+                            </li>
+                            <li className={styles.nav__el}>
+                                <Link to="/" className={styles.nav__link}>
+                                    <ConciergeServiceIcon/>
+                                    Консьерж сервис
+                                </Link>
+                            </li>
+                            <li className={styles.nav__el}>
+                                <Link to="/" className={styles.nav__link}>
+                                    <QuizIcon/>
+                                    Опросы
+                                </Link>
+                            </li>
+                            <li className={styles.nav__el}>
+                                <Link to="/" className={styles.nav__link}>
+                                    <ProfileIcon/>
+                                    Профиль
+                                </Link>
+                            </li>
+                            <li className={styles.nav__el}>
+                                <Link to="/" className={styles.nav__link}>
+                                    <ContactIcon/>
+                                    Контакты
+                                </Link>
+                            </li>
+                        </ul>
+                        <button className={styles.btn__logout}>
+                            <LogoutIcon/>
+                            Выйти
+                        </button>
+                    </nav>
+                </aside>
+            )}
+
+            <Burger/>
+        </>
+
     );
 };
 
