@@ -53,3 +53,9 @@
     color: white;
     background-color: #505D54;
 }
+
+@media {
+    .aside {
+        display: none;
+    }
+}

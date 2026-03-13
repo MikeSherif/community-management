@@ -19,4 +19,8 @@
         flex-direction: column;
         gap: 10px;
     }
+
+    .rightColumn {
+        padding: 0 15px;
+    }
 }

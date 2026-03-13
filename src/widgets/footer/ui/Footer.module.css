@@ -71,3 +71,20 @@
     letter-spacing: -1%;
     color: #1A2521;
 }
+
+@media (max-width: 768px) {
+    .footer__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .footer__bottom_text_wrapper {
+        font-size: 12px;
+    }
+
+    .tel {
+        font-size: 18px;
+    }
+}
