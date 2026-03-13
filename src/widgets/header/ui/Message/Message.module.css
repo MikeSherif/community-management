@@ -13,3 +13,9 @@
     line-height: 21px;
     vertical-align: middle;
 }
+
+@media (max-width: 992px) {
+    .message__name {
+        display: none;
+    }
+}
