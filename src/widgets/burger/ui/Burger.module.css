@@ -93,13 +93,14 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
+    overflow-y: auto;
 }
 
 .navLink {
     display: flex;
     align-items: center;
     gap: 20px;
-    padding: 20px;
+    padding: 10px;
     border-radius: 26.5px;
     color: #62675D;
     font-family: "Tilda Sans VF", system-ui, sans-serif;
