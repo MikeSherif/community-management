@@ -3,6 +3,7 @@
     flex-direction: row;
     align-items: center;
     gap: 15px;
+    color: #56595F;
 }
 
 .message__name {
