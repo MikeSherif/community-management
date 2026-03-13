@@ -63,7 +63,7 @@ const Burger = () => {
             {/* Боковое меню */}
             <div className={`${styles.menu} ${isOpen ? styles.menuActive : ""}`}>
                 <div className={styles.menuHeader}>
-                    <h2 className={styles.menuTitle}>Меню</h2>
+
                 </div>
 
                 <nav className={styles.nav}>
