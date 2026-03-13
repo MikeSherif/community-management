@@ -178,7 +178,10 @@ color: #FFFFFF;
     padding-bottom: 20px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
+    .information {
+        padding: 35px 25px;
+    }
     .information__news_list, .information__article_list {
         grid-template-columns: repeat(1, 1fr);
     }
