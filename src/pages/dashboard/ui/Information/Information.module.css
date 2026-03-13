@@ -88,6 +88,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     gap: 20px;
     background: #FFFFFF;
     padding: 5px;
@@ -181,6 +182,10 @@ color: #FFFFFF;
 @media (max-width: 992px) {
     .information {
         padding: 35px 25px;
+    }
+    .information__hero_wrapper {
+        flex-direction: column;
+        gap: 25px;
     }
     .information__news_list, .information__article_list {
         grid-template-columns: repeat(1, 1fr);
