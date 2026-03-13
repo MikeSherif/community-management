@@ -129,6 +129,9 @@
     border-radius: 31.06px;
     overflow: hidden;
     background-image: url("/assets/img/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .information__article_el::after {
@@ -175,6 +178,11 @@ color: #FFFFFF;
     padding-bottom: 20px;
 }
 
+@media (max-width: 768px) {
+    .information__news_list, .information__article_list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
 
 
 
