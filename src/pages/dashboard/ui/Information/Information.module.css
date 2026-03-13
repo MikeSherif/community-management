@@ -29,6 +29,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+    gap: 15px;
 }
 
 .information__hero_text_wrapper {
@@ -177,6 +178,13 @@
     letter-spacing: 0%;
 color: #FFFFFF;
     padding-bottom: 20px;
+}
+
+@media (max-width: 1400px) {
+    .information__news_list, .information__article_list {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 25px;
+    }
 }
 
 @media (max-width: 992px) {

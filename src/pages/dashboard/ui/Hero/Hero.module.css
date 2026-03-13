@@ -60,7 +60,7 @@
     vertical-align: middle;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     .hero__left {
         grid-column: span 8;
 
@@ -70,4 +70,8 @@
         grid-column: span 8;
 
     }
+}
+
+@media (max-width: 768px) {
+
 }

@@ -38,4 +38,8 @@
     .notification__name {
         display: none;
     }
+
+    .notification{
+        gap: 5px;
+    }
 }
