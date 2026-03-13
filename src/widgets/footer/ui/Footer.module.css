@@ -3,6 +3,7 @@
     margin: 0 auto;
     padding: 0 20px;
     margin-bottom: 60px;
+    overflow: hidden;
 }
 
 .footer__body {
@@ -72,6 +73,13 @@
     color: #1A2521;
 }
 
+.footer__bg_image {
+    margin-top: 20px;
+    width: 100vw;
+    height: 100px;
+    background-image: url("/assets/img/footer__background.png");
+}
+
 @media (max-width: 768px) {
     .footer__body {
         display: flex;
@@ -86,5 +94,9 @@
 
     .tel {
         font-size: 18px;
+    }
+
+    .footer__bg_image {
+        height: 60px;
     }
 }

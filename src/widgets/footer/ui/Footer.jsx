@@ -31,6 +31,8 @@ const Footer = () => {
             <div className={styles.footer_bottom}>
 
             </div>
+
+            <div className={styles.footer__bg_image}></div>
         </div>
     );
 };
