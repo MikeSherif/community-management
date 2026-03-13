@@ -91,3 +91,15 @@
     width: 100%;
     max-width: 300px;
 }
+
+@media (max-width: 992px) {
+    .request__header_text {
+        font-size: 12px;
+    }
+    .request__status {
+        font-size: 10px;
+    }
+    .request__manager_role, .request__manager_name, .request__date {
+        font-size: 9px;
+    }
+}
