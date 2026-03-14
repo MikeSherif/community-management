@@ -58,7 +58,10 @@
 
 @media (max-width: 576px) {
     .application {
-        padding: 15px 25px;
+        padding: 15px 20px;
+    }
+    .application__wrapper {
+        gap: 10px;
     }
     .application__name {
         font-size: 12px;
