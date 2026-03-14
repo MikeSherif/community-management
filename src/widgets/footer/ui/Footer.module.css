@@ -8,6 +8,13 @@
     margin-bottom: 60px;
     overflow: hidden;
 }
+.logo__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 15px;
+}
 
 .footer__body {
     display: flex;
@@ -103,6 +110,13 @@
 
     .tel {
         font-size: 18px;
+    }
+
+    .footer__bottom {
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        text-align: center;
     }
 
     .footer__bg_image {
