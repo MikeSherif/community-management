@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { useMediaQuery } from "react-responsive";
-import { Link } from "react-router-dom";
+import React, {useState, useEffect} from "react";
+import {useMediaQuery} from "react-responsive";
+import {Link} from "@tanstack/react-router";
 import styles from "./Burger.module.css";
+import {ROUTES} from "@/app/router/routes.js";
 
 import {
     ConciergeServiceIcon,
@@ -17,7 +18,7 @@ import {
 
 const Burger = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const isMobile = useMediaQuery({ maxWidth: 992 });
+    const isMobile = useMediaQuery({maxWidth: 992});
 
     useEffect(() => {
         if (isOpen) {
@@ -70,81 +71,89 @@ const Burger = () => {
                     <ul className={styles.navList}>
                         <li className={styles.navItem}>
                             <Link
-                                to="/"
+                                to={ROUTES.dashboard.path}
                                 className={styles.navLink}
+                                activeProps={{ className: `${styles.navLink} ${styles.active}` }}
                                 onClick={() => setIsOpen(false)}
                             >
-                                <MonitorIcon />
+                                <MonitorIcon/>
                                 Монитор
                             </Link>
                         </li>
                         <li className={styles.navItem}>
                             <Link
-                                to="/my-requests"
+                                to={ROUTES.applications.path}
                                 className={styles.navLink}
+                                activeProps={{ className: `${styles.navLink} ${styles.active}` }}
                                 onClick={() => setIsOpen(false)}
                             >
-                                <MyRequestsIcon />
+                                <MyRequestsIcon/>
                                 Мои заявки
                             </Link>
                         </li>
                         <li className={styles.navItem}>
                             <Link
-                                to="/personal-account"
+                                to={ROUTES.account.path}
                                 className={styles.navLink}
+                                activeProps={{ className: `${styles.navLink} ${styles.active}` }}
                                 onClick={() => setIsOpen(false)}
                             >
-                                <PersonalAccountIcon />
+                                <PersonalAccountIcon/>
                                 Лицевой счет
                             </Link>
                         </li>
                         <li className={styles.navItem}>
                             <Link
-                                to="/documents"
+                                to={ROUTES.documents.path}
                                 className={styles.navLink}
+                                activeProps={{ className: `${styles.navLink} ${styles.active}` }}
                                 onClick={() => setIsOpen(false)}
                             >
-                                <DocumentsIcon />
+                                <DocumentsIcon/>
                                 Документы
                             </Link>
                         </li>
                         <li className={styles.navItem}>
                             <Link
-                                to="/concierge"
+                                to={ROUTES.concierge.path}
                                 className={styles.navLink}
+                                activeProps={{ className: `${styles.navLink} ${styles.active}` }}
                                 onClick={() => setIsOpen(false)}
                             >
-                                <ConciergeServiceIcon />
+                                <ConciergeServiceIcon/>
                                 Консьерж сервис
                             </Link>
                         </li>
                         <li className={styles.navItem}>
                             <Link
-                                to="/quizzes"
+                                to={ROUTES.polls.path}
                                 className={styles.navLink}
+                                activeProps={{ className: `${styles.navLink} ${styles.active}` }}
                                 onClick={() => setIsOpen(false)}
                             >
-                                <QuizIcon />
+                                <QuizIcon/>
                                 Опросы
                             </Link>
                         </li>
                         <li className={styles.navItem}>
                             <Link
-                                to="/profile"
+                                to={ROUTES.profile.path}
                                 className={styles.navLink}
+                                activeProps={{ className: `${styles.navLink} ${styles.active}` }}
                                 onClick={() => setIsOpen(false)}
                             >
-                                <ProfileIcon />
+                                <ProfileIcon/>
                                 Профиль
                             </Link>
                         </li>
                         <li className={styles.navItem}>
                             <Link
-                                to="/contacts"
+                                to={ROUTES.contacts.path}
                                 className={styles.navLink}
+                                activeProps={{ className: `${styles.navLink} ${styles.active}` }}
                                 onClick={() => setIsOpen(false)}
                             >
-                                <ContactIcon />
+                                <ContactIcon/>
                                 Контакты
                             </Link>
                         </li>
@@ -157,7 +166,7 @@ const Burger = () => {
                             setIsOpen(false);
                         }}
                     >
-                        <LogoutIcon />
+                        <LogoutIcon/>
                         Выйти
                     </button>
                 </nav>

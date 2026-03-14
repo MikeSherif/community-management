@@ -39,8 +39,7 @@
 
     color: #62675D;
 
-    font-family: Tilda Sans VF;
-    font-weight: 400;
+    font-weight: var(--font-weight-regular);
     font-size: 14px;
     line-height: 27px;
     vertical-align: middle;
@@ -51,7 +50,7 @@
     transition: 0.3s ease-in-out all;
 }
 
-.nav__link:hover, .btn__logout:hover {
+.nav__link:hover, .nav__link.active, .btn__logout:hover {
     color: white;
     background-color: #505D54;
     transition: 0.3s ease-in-out all;

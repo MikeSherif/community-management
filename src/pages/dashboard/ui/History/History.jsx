@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './History.module.css';
-import HistoryRequest from "@/entities/history-request";
+import HistoryApplication from "@/entities/history-application";
 
 const History = () => {
     return (
@@ -10,7 +10,7 @@ const History = () => {
                 <button className={styles.history__btn}>Вся история</button>
             </div>
             <ul className={styles.history__list}>
-                <HistoryRequest/>
+                <HistoryApplication/>
             </ul>
         </div>
     );

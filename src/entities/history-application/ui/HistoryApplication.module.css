@@ -9,8 +9,7 @@
 
 .request__header_text {
     color: #56595F;
-    font-family: Inter;
-    font-weight: 400;
+    font-weight: var(--font-weight-regular);
     font-size: 17px;
     leading-trim: NONE;
     line-height: 25.5px;
@@ -34,8 +33,7 @@
     background: #6BA9EF;
 
     color: #FFFFFF;
-    font-family: Inter;
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     font-style: Medium;
     font-size: 14px;
     leading-trim: NONE;
@@ -52,8 +50,7 @@
 }
 
 .request__manager_role, .request__manager_name, .request__date {
-    font-family: Inter;
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     font-size: 13px;
     letter-spacing: 0;
     vertical-align: middle;
@@ -80,8 +77,7 @@
 }
 
 .request__footer_text {
-    font-family: Inter;
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     font-size: 13px;
     vertical-align: middle;
     color: #56595F99;
@@ -96,9 +92,11 @@
     .request__header_text {
         font-size: 12px;
     }
+
     .request__status {
         font-size: 10px;
     }
+
     .request__manager_role, .request__manager_name, .request__date {
         font-size: 9px;
     }

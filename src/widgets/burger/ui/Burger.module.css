@@ -82,7 +82,7 @@
 
 .menuTitle {
     font-size: 1.25rem;
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     color: #111827;
 }
 
@@ -104,15 +104,14 @@
     padding: 10px;
     border-radius: 26.5px;
     color: #62675D;
-    font-family: "Tilda Sans VF", system-ui, sans-serif;
-    font-weight: 400;
+    font-weight: var(--font-weight-regular);
     font-size: 14px;
     line-height: 27px;
     transition: all 0.2s ease;
     text-decoration: none;
 }
 
-.navLink:hover {
+.navLink:hover, .navLink.active {
     color: white;
     background-color: #505D54;
 }
@@ -126,8 +125,7 @@
     padding: 20px;
     border-radius: 26.5px;
     color: #62675D;
-    font-family: "Tilda Sans VF", system-ui, sans-serif;
-    font-weight: 400;
+    font-weight: var(--font-weight-regular);
     font-size: 14px;
     line-height: 27px;
     background: none;

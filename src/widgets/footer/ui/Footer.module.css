@@ -14,26 +14,10 @@
     gap: 25px;
 }
 
-.social__icons {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 15px;
 
-}
-
-.social__icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px;
-    border: 1px solid #56595F;
-    border-radius: 50%;
-}
 
 .email {
-    font-family: Exo 2;
-    font-weight: 400;
+    font-weight: var(--font-weight-regular);
     font-style: Regular;
     font-size: 20px;
     leading-trim: NONE;
@@ -55,16 +39,14 @@
 .footer__bottom_text_wrapper {
     max-width: 220px;
 
-    font-family: Tilda Sans;
-    font-weight: 300;
+    font-weight: var(--font-weight-light);
     font-size: 23.84px;
     line-height: 23.84px;
     color: #56595F;
 }
 
 .tel {
-    font-family: Tilda Sans;
-    font-weight: 300;
+    font-weight: var(--font-weight-light);
     font-style: Light;
     font-size: 49.6px;
     leading-trim: NONE;

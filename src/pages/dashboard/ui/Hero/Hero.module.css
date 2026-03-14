@@ -52,8 +52,7 @@
     line-height: 100%;
     align-self: flex-end;
     max-width: 105px;
-    font-family: Inter;
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
     font-size: 17px;
     line-height: 21.08px;
     letter-spacing: 0;

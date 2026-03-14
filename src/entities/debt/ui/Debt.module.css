@@ -18,8 +18,7 @@
 }
 
 .debt__header_text {
-    font-family: Inter;
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
     font-size: 17px;
     letter-spacing: 0;
     vertical-align: middle;
@@ -41,8 +40,7 @@
     background: #FC0F0F;
     border-radius: 16px;
 
-    font-family: Inter;
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     font-size: 14px;
     vertical-align: middle;
     color: #fff;
@@ -65,8 +63,7 @@
     padding: 9px 15px;
     border-radius: 18px;
 
-    font-family: Inter;
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     font-style: Medium;
     font-size: 16px;
     text-align: center;

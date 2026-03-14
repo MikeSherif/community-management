@@ -1,25 +1,12 @@
 import styles from './Footer.module.css';
-import {TelegramIcon, VkIcon, WhatsappIcon, YouTubeIcon} from "@/shared/ui/icons.jsx";
+import SocialIcons from "@/shared/ui/social-icons/SocialIcons.jsx";
 
 const Footer = () => {
     return (
         <>
             <div className={styles.footer}>
                 <div className={styles.footer__body}>
-                    <ul className={styles.social__icons}>
-                        <li className={styles.social__icon}>
-                            <TelegramIcon/>
-                        </li>
-                        <li className={styles.social__icon}>
-                            <YouTubeIcon/>
-                        </li>
-                        <li className={styles.social__icon}>
-                            <VkIcon/>
-                        </li>
-                        <li className={styles.social__icon}>
-                            <WhatsappIcon/>
-                        </li>
-                    </ul>
+                    <SocialIcons />
                     <a className={styles.email} href="mailto:cornerservicemsk@yandex.ru">cornerservicemsk@yandex.ru</a>
 
                     <article className={styles.footer__telephone}>

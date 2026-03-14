@@ -1,7 +1,8 @@
 import React from 'react';
 import {MessageIcon} from "@/shared/ui/icons.jsx";
 import styles from "./Message.module.css";
-import {NavLink} from "react-router-dom";
+import { Link } from "@tanstack/react-router";
+import { ROUTES } from "@/app/router/routes.js";
 
 const Message = (props) => {
     const {
@@ -9,10 +10,10 @@ const Message = (props) => {
     } = props;
     return (
         <li className={`${className}`}>
-            <NavLink className={styles.message}>
+            <Link to={ROUTES.dashboard.path} className={styles.message}>
                 <MessageIcon/>
                 <p className={styles.message__name}>Сообщения</p>
-            </NavLink>
+            </Link>
         </li>
     );
 };

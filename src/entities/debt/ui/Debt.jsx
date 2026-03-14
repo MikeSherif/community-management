@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './Debt.module.css';
 import {DebtIcon} from "@/shared/ui/icons.jsx";
-const Debt = () => {
+const Debt = (props) => {
+    const {debt, debts} = props;
     return (
         <article className={styles.debt}>
             <div className={styles.debt__header}>

@@ -1,7 +1,7 @@
 import React from 'react';
 import History from "@/pages/dashboard/ui/History/History.jsx";
 import styles from './Hero.module.css'
-import Debt from "@/widgets/debt/ui/Debt.jsx";
+import Debt from "@/entities/debt";
 const Hero = () => {
     return (
         <div className={styles.hero}>

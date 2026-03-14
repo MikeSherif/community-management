@@ -16,8 +16,7 @@
 }
 
 .notification__value {
-    font-family: Inter;
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     font-size: 12px;
     line-height: 12px;
     text-align: center;
@@ -27,8 +26,7 @@
 
 .notification__name {
     color: #56595F80;
-    font-family: Tilda Sans VF;
-    font-weight: 400;
+    font-weight: var(--font-weight-regular);
     font-size: 14px;
     line-height: 21px;
     vertical-align: middle;

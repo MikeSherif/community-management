@@ -15,30 +15,23 @@
 }
 
 .history__title {
-    font-family: Tilda Sans;
-    font-weight: 300;
-    font-style: Light;
+    font-weight: var(--font-weight-light);
     font-size: 30px;
-    leading-trim: NONE;
     line-height: 100%;
-    letter-spacing: 0%;
+    letter-spacing: 0;
 }
 
 .history__btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #56595F99;
-;
+    background: #56595F99;;
     border-radius: 18px;
     padding: 9px 15px;
 
-    font-family: Inter;
-    font-weight: 500;
-    font-style: Medium;
+    font-weight: var(--font-weight-medium);
     font-size: 16px;
-    leading-trim: NONE;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     text-align: center;
     vertical-align: middle;
     color: #fff;

@@ -1,0 +1,114 @@
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal {
+    background: white;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 420px;
+    padding: 24px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.close {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #999;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.field label {
+    font-weight: 500;
+    font-size: 14px;
+    color: #555;
+}
+
+.field select,
+.field input,
+.field textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.row {
+    display: flex;
+    gap: 12px;
+}
+
+.row > div {
+    flex: 1;
+}
+
+.submit {
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 12px;
+    color: white;
+}
+
+.submitReport {
+    background: #ff6b6b; /* красноватый для "Сообщить о проблеме" */
+}
+
+.submitCreate {
+    background: #4caf50; /* зелёный для "Создать заявку" */
+}
+
+.urgentBlock {
+    text-align: center;
+    margin: 20px 0 8px;
+    color: #666;
+    font-size: 14px;
+}
+
+.urgentBtn {
+    background: #ff9800;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 13px;
+    color: #888;
+}

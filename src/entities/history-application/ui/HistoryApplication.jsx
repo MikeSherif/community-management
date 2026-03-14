@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './HistoryRequest.module.css'
+import styles from './HistoryApplication.module.css'
 import {HistoryRequestMessageIcon} from "@/shared/ui/icons.jsx";
 
-const HistoryRequest = () => {
+const HistoryApplication = () => {
     return (
         <li>
             <article className={styles.request}>
@@ -58,4 +58,4 @@ const HistoryRequest = () => {
     );
 };
 
-export default HistoryRequest;
+export default HistoryApplication;
