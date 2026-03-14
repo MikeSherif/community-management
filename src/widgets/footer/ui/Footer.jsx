@@ -16,8 +16,9 @@ const Footer = () => {
                         <a className={styles.tel} href="tel:+79856882601">+7 (985) 688-26-01</a>
                     </article>
                 </div>
-                <div className={styles.footer_bottom}>
-
+                <div className={styles.footer__bottom}>
+                    <p className={styles.footer__bottom_text}>© 2026 “Корнер Лапино”. Все права защищены.</p>
+                    <p className={styles.footer__bottom_text}>Политика конфиденциальности</p>
                 </div>
 
 

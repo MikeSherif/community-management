@@ -13,7 +13,6 @@
 }
 
 .debt__text_wrapper {
-    max-width: 150px;
     width: 100%;
 }
 
@@ -44,6 +43,13 @@
     font-size: 14px;
     vertical-align: middle;
     color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.debt__status.paid {
+    background: white;
+    color: #1F1F1F;
+    transition: all 0.3s ease-in-out;
 }
 
 .debt__tabs {
@@ -64,17 +70,23 @@
     border-radius: 18px;
 
     font-weight: var(--font-weight-medium);
-    font-style: Medium;
     font-size: 16px;
     text-align: center;
     vertical-align: middle;
     color: #111;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
 .debt__tab.active {
     background: #289D68;
     color: #fff;
+}
+
+.debt__tab.paid {
+    pointer-events: none;
+    opacity: 0.5;
+    transition: all 0.3s ease-in-out;
 }
 
 @media (max-width: 992px) {

@@ -10,9 +10,9 @@
 
 .modal {
     background: white;
-    border-radius: 16px;
+    border-radius: 30px;
     width: 100%;
-    max-width: 420px;
+    max-width: 520px;
     padding: 24px;
     position: relative;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -23,6 +23,24 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    border-radius: 25px;
+    padding: 20px 30px;
+    background: #F1F4F9;
+}
+
+.header.report {
+    background: #FF6D6D;
+}
+
+.header__title {
+    color: #56595F;
+    font-weight: var(--font-weight-regular);
+    font-size: 28px;
+    vertical-align: middle;
+}
+
+.header__title.report {
+    color: #fff;
 }
 
 .close {
@@ -96,7 +114,7 @@
 }
 
 .urgentBtn {
-    background: #ff9800;
+    background: #FF6D6D;
     color: white;
     border: none;
     padding: 12px 24px;

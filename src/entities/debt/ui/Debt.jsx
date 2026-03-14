@@ -1,27 +1,49 @@
-import React from 'react';
+// src/widgets/Debt/ui/Debt.js   (или shared/ui/Debt/Debt.js — как удобнее в твоём FSD)
+import React, { useState } from 'react';
 import styles from './Debt.module.css';
-import {DebtIcon} from "@/shared/ui/icons.jsx";
-const Debt = (props) => {
-    const {debt, debts} = props;
+import { DebtIcon } from '@/shared/ui/icons.jsx';
+
+const Debt = () => {
+    const [isPaid, setIsPaid] = useState(false);
+    const [amount, setAmount] = useState(1890);
+
+    const handlePayClick = () => {
+        // Здесь в реальном проекте будет вызов API / zustand-действие
+        // setTimeout имитирует "оплату"
+        setTimeout(() => {
+            setAmount(0);
+            setIsPaid(true);
+        }, 800); // небольшая задержка для ощущения процесса
+    };
+
     return (
         <article className={styles.debt}>
             <div className={styles.debt__header}>
-                <div className={styles.debt__text_wrapper}>
+                <div className={styles.debt__text_wrapper} style={isPaid ? { maxWidth: '300px' } : {maxWidth: '150px'}}>
                     <p className={styles.debt__header_text}>
-                        У вас есть просроченная задолженность!
+                        {isPaid
+                            ? 'Спасибо! На данный момент задолженность отсутствует!'
+                            : 'У вас есть просроченная задолженность!'}
                     </p>
                 </div>
-                <DebtIcon/>
+                <DebtIcon />
             </div>
+
             <div className={styles.debt__footer}>
-                <div className={styles.debt__status}>
-                    1 890 ₽
+                <div className={`${styles.debt__status} ${isPaid ? styles.paid : ''}`}>
+                    {amount.toLocaleString('ru-RU')} ₽
                 </div>
+
                 <div className={styles.debt__tabs}>
-                    <button className={`${styles.debt__tab} ${styles.active}`} onClick={() => {}}>
-                        Оплатить
+                    <button
+                        className={`${styles.debt__tab} ${styles.active} ${isPaid ? styles.paid : ''}`}
+                        onClick={handlePayClick}
+                        disabled={isPaid || amount === 0}
+                    >
+                        {isPaid ? 'Оплачено' : 'Оплатить'}
                     </button>
-                    <button className={styles.debt__tab}>
+
+                    <button className={styles.debt__tab} disabled={isPaid}>
                         История
                     </button>
                 </div>

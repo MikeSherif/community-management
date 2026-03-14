@@ -1,5 +1,8 @@
 .footer {
     max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     margin: 0 auto;
     padding: 0 20px;
     margin-bottom: 60px;
@@ -53,6 +56,25 @@
     line-height: 110.00000000000001%;
     letter-spacing: -1%;
     color: #1A2521;
+}
+
+.footer__bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.footer__bottom_text {
+    color: #62675D;
+    font-weight: var(--font-weight-regular);
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: 0;
+    opacity: 0.5;
+
+    padding-bottom: 10px;
 }
 
 .footer__bg_image {
