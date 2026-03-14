@@ -1,0 +1,22 @@
+.link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 13px;
+    color: #56595F;
+    transition: all 0.3s ease-in-out;
+}
+
+.link__text {
+    color: #56595F99;
+    font-weight: var(--font-weight-medium);
+    font-size: 13px;
+    letter-spacing: 0;
+    vertical-align: middle;
+    transition: all 0.3s ease-in-out;
+}
+
+.link:hover, .link:hover .link__text {
+    color: #1e1f21;
+    transition: all 0.3s ease-in-out;
+}

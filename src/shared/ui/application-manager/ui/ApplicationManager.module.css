@@ -1,0 +1,24 @@
+.application__manager {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.application__manager_role, .application__manager_name{
+    font-weight: var(--font-weight-medium);
+    font-size: 13px;
+    letter-spacing: 0;
+    vertical-align: middle;
+    color: #56595F99;
+}
+
+.application__manager_role::first-letter, .application__manager_name::first-letter{
+    text-transform: uppercase;
+}
+
+@media (max-width: 992px) {
+    .application__manager_role, .application__manager_name {
+        font-size: 9px;
+    }
+}

@@ -1,0 +1,44 @@
+.status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 12px;
+    border-radius: 20px;          /* или 999px для сильно скруглённых */
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1;
+    white-space: nowrap;
+    color: white;
+    min-width: 80px;              /* чтобы не прыгало при смене текста */
+    text-align: center;
+}
+
+/* Варианты статусов */
+.urgent {
+    background-color: #FF6D6D;
+}
+
+.personal {
+    background-color: #E1D5AD;
+    color: #333;                  /* тёмный текст, т.к. фон светлый */
+}
+
+.new {
+    background-color: #6BA9EF;
+}
+
+.active {
+    background-color: #23C47B;
+}
+
+/* На случай неизвестного статуса */
+.unknown {
+    background-color: #9E9E9E;
+    color: white;
+}
+
+@media (max-width: 576px) {
+    .status {
+        font-size: 10px;
+    }
+}

@@ -2,12 +2,24 @@ import React from 'react';
 import History from "@/pages/dashboard/ui/History/History.jsx";
 import styles from './Hero.module.css'
 import Debt from "@/entities/debt";
+import RequestFormModal from "@/widgets/request-form-modal/index.js";
 const Hero = () => {
+    const [isOpen, setIsOpen] = React.useState(false);
+
+    const openReport = () => setIsOpen('report');
+    const openCreate = () => setIsOpen('create');
+
+    const handleClose = () => setIsOpen(false);
+
+    const handleSubmit = (data) => {
+        console.log('Заявка отправлена:', data);
+        // здесь можно zustand или api call
+    };
     return (
         <div className={styles.hero}>
             <div className={styles.hero__left}>
                 <div className={styles.actions}>
-                    <div className={styles.action}>
+                    <div onClick={openReport} className={styles.action}>
                         <div className={styles.action__text}>
                             Сообщить о проблеме
                         </div>
@@ -28,6 +40,13 @@ const Hero = () => {
 
                     </div>
                 </div>
+                {isOpen && (
+                    <RequestFormModal
+                        variant={isOpen}           // 'report' или 'create'
+                        onClose={handleClose}
+                        onSubmit={handleSubmit}
+                    />
+                )}
                 <History/>
 
             </div>
