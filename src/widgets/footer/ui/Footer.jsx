@@ -1,18 +1,20 @@
 import styles from './Footer.module.css';
 import SocialIcons from "@/shared/ui/social-icons/SocialIcons.jsx";
 import {LogoIcon, LogoText} from "@/shared/ui/icons.jsx";
+import {useMediaQuery} from "react-responsive";
 
 const Footer = () => {
-    return (
-        <>
+    const isMobile = useMediaQuery({maxWidth: 768})
+    return (<>
             <div className={styles.footer}>
-                <div className={styles.logo__wrapper}>
+
+                {isMobile && <div className={styles.logo__wrapper}>
                     <LogoIcon></LogoIcon>
                     <LogoText></LogoText>
-                </div>
+                </div>}
 
                 <div className={styles.footer__body}>
-                    <SocialIcons />
+                    <SocialIcons/>
                     <a className={styles.email} href="mailto:cornerservicemsk@yandex.ru">cornerservicemsk@yandex.ru</a>
 
                     <article className={styles.footer__telephone}>
