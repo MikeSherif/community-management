@@ -1,51 +1,16 @@
-import React from 'react';
-import { useForm } from 'react-hook-form';
+import React, { useEffect, useMemo, useState } from 'react';
+import { useForm, Controller } from 'react-hook-form';
+import { IMaskInput } from 'react-imask';
 import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
+import {schema} from "@/features/profile-edit/model/profileEditSchema.js";
 import styles from './ProfileEditForm.module.css';
-
-// ── Схема валидации (yup) ────────────────────────────────────────────────
-const schema = yup.object({
-    firstName: yup.string().trim().required('Укажите имя'),
-    lastName:  yup.string().trim().required('Укажите фамилию'),
-
-    email: yup
-        .string()
-        .required('Укажите email')
-        .email('Некорректный email'),
-
-    phone: yup
-        .string()
-        .required('Укажите номер телефона')
-        .matches(/^\+7\s?\d{3}\s?\d{3}[-\s]?\d{2}[-\s]?\d{2}$/, 'Формат: +7 999 123-45-67'),
-
-    homePhone: yup.string().nullable().notRequired(), // опционально
-
-    personalAccount: yup
-        .string()
-        .required('Укажите лицевой счёт')
-        .matches(/^\d{8,10}$/, 'Лицевой счёт — 8–10 цифр'),
-
-    password: yup
-        .string()
-        .required('Укажите пароль')
-        .min(6, 'Минимум 6 символов'),
-
-    avatar: yup
-        .mixed()
-        .nullable()
-        .test('fileSize', 'Файл слишком большой (макс. 5 МБ)', (value) =>
-            !value || (value instanceof File && value.size <= 5 * 1024 * 1024)
-        )
-        .test('fileType', 'Только jpg, png, webp', (value) =>
-            !value ||
-            ['image/jpeg', 'image/png', 'image/webp'].includes(value.type)
-        ),
-}).required();
+import Toast from '@/widgets/toast';
+import {ProfileIcon} from "@/shared/ui/icons.jsx";
 
 const ProfileEditForm = () => {
     const {
         register,
+        control,
         handleSubmit,
         formState: { errors, isSubmitting },
         watch,
@@ -64,9 +29,30 @@ const ProfileEditForm = () => {
             avatar: null,
         },
         mode: 'onChange', // или 'onBlur' / 'onSubmit'
+        reValidateMode: 'onChange',
     });
 
     const avatarPreview = watch('avatar');
+    const [toastVisible, setToastVisible] = useState(false);
+    const [toastMessages, setToastMessages] = useState([]);
+
+    const errorMessages = useMemo(() => {
+        return Object.values(errors)
+            .map((error) => error?.message)
+            .filter(Boolean);
+    }, [errors]);
+
+    useEffect(() => {
+        if (errorMessages.length > 0) {
+            setToastMessages(errorMessages);
+            setToastVisible(true);
+            return;
+        }
+
+        setToastVisible(false);
+        const timer = setTimeout(() => setToastMessages([]), 300);
+        return () => clearTimeout(timer);
+    }, [errorMessages]);
 
     const onSubmit = async (data) => {
         // data.avatar — это File объект, если выбрали файл
@@ -88,59 +74,88 @@ const ProfileEditForm = () => {
     return (
         <form className={styles.form} onSubmit={handleSubmit(onSubmit)} noValidate>
             <div className={styles.row}>
-                <div className={styles.field}>
+                <div className={`${styles.field} ${errors.firstName ? styles.fieldError : ''}`}>
                     <label htmlFor="firstName">Ваше имя</label>
                     <input
                         id="firstName"
                         {...register('firstName')}
                         placeholder="Валерия"
+                        className={styles.input}
+                        aria-invalid={Boolean(errors.firstName)}
                     />
-                    {errors.firstName && <span className={styles.error}>{errors.firstName.message}</span>}
                 </div>
 
-                <div className={styles.field}>
+                <div className={`${styles.field} ${errors.lastName ? styles.fieldError : ''}`}>
                     <label htmlFor="lastName">Фамилия</label>
                     <input
                         id="lastName"
                         {...register('lastName')}
                         placeholder="Салаватуллина"
+                        className={styles.input}
+                        aria-invalid={Boolean(errors.lastName)}
                     />
-                    {errors.lastName && <span className={styles.error}>{errors.lastName.message}</span>}
                 </div>
 
-                <div className={styles.field}>
+                <div className={`${styles.field} ${errors.email ? styles.fieldError : ''}`}>
                     <label htmlFor="email">Электронная почта</label>
                     <input
                         id="email"
                         type="email"
                         {...register('email')}
                         placeholder="salavat@info.ru"
+                        className={styles.input}
+                        aria-invalid={Boolean(errors.email)}
                     />
-                    {errors.email && <span className={styles.error}>{errors.email.message}</span>}
                 </div>
             </div>
             <div className={styles.row}>
-                <div className={styles.field}>
+                <div className={`${styles.field} ${errors.phone ? styles.fieldError : ''}`}>
                     <label htmlFor="phone">Номер телефона</label>
-                    <input
-                        id="phone"
-                        {...register('phone')}
-                        placeholder="+7 999 156-19-92"
+                    <Controller
+                        name="phone"
+                        control={control}
+                        render={({ field }) => (
+                            <IMaskInput
+                                id="phone"
+                                mask="+{7} 000 000-00-00"
+                                placeholder="+7 999 156-19-92"
+                                inputMode="tel"
+                                value={field.value}
+                                onAccept={(value) => field.onChange(value)}
+                                onBlur={field.onBlur}
+                                className={styles.input}
+                                aria-invalid={Boolean(errors.phone)}
+                            />
+                        )}
                     />
-                    {errors.phone && <span className={styles.error}>{errors.phone.message}</span>}
                 </div>
 
-                <div className={styles.field}>
+                <div className={`${styles.field} ${errors.homePhone ? styles.fieldError : ''}`}>
                     <label htmlFor="homePhone">Домашний телефон</label>
-                    <input
-                        id="homePhone"
-                        {...register('homePhone')}
-                        placeholder="8 843 561-42-43"
+                    <Controller
+                        name="homePhone"
+                        control={control}
+                        render={({ field }) => (
+                            <IMaskInput
+                                id="homePhone"
+                                mask="8 000 000-00-00"
+                                placeholder="8 843 561-42-43"
+                                inputMode="tel"
+                                value={field.value || ''}
+                                onAccept={(value) => field.onChange(value)}
+                                onBlur={field.onBlur}
+                                className={styles.input}
+                                aria-invalid={Boolean(errors.homePhone)}
+                            />
+                        )}
                     />
-                    {errors.homePhone && <span className={styles.error}>{errors.homePhone.message}</span>}
                 </div>
 
-                <div className={`${styles.field} ${styles.field__avatar}`}>
+                <div
+                    className={`${styles.field} ${styles.field__avatar} ${
+                        errors.avatar ? styles.fieldError : ''
+                    }`}
+                >
                     <div className={styles.labelWrapper}>
                         <label>Фотография</label>
                         <input
@@ -163,37 +178,36 @@ const ProfileEditForm = () => {
                                 className={styles.preview}
                             />
                         ) : (
-                            <div className={styles.placeholder}>Фото</div>
+                            <div className={styles.placeholder}><ProfileIcon/></div>
                         )}
 
 
                     </div>
-                    {errors.avatar && <span className={styles.error}>{errors.avatar.message}</span>}
                 </div>
             </div>
 
             <div className={styles.row}>
-                <div className={styles.field}>
+                <div className={`${styles.field} ${errors.personalAccount ? styles.fieldError : ''}`}>
                     <label htmlFor="personalAccount">Лицевой счет</label>
                     <input
                         id="personalAccount"
                         {...register('personalAccount')}
                         placeholder="13455794"
+                        className={styles.input}
+                        aria-invalid={Boolean(errors.personalAccount)}
                     />
-                    {errors.personalAccount && (
-                        <span className={styles.error}>{errors.personalAccount.message}</span>
-                    )}
                 </div>
 
-                <div className={styles.field}>
+                <div className={`${styles.field} ${errors.password ? styles.fieldError : ''}`}>
                     <label htmlFor="password">Пароль</label>
                     <input
                         id="password"
                         type="password"
                         {...register('password')}
                         placeholder="Новый пароль (если меняете)"
+                        className={styles.input}
+                        aria-invalid={Boolean(errors.password)}
                     />
-                    {errors.password && <span className={styles.error}>{errors.password.message}</span>}
                 </div>
             </div>
 
@@ -215,6 +229,11 @@ const ProfileEditForm = () => {
                     Отменить изменения
                 </button>
             </div>
+            <Toast
+                title="Ошибки в форме"
+                messages={toastMessages}
+                visible={toastVisible}
+            />
         </form>
     );
 };
