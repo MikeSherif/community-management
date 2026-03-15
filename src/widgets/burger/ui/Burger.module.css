@@ -138,3 +138,9 @@
     color: white;
     background-color: #505D54;
 }
+
+@media (max-width: 768px) {
+    .burgerButton {
+        margin-left: 15px;
+    }
+}

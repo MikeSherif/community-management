@@ -17,10 +17,10 @@
     .wrapper {
         width: 100%;
         flex-direction: column;
-        gap: 10px;
+        gap: 0;
     }
 
     .rightColumn {
-        padding: 0 15px;
+        padding: 0 25px;
     }
 }
