@@ -19,6 +19,7 @@ import Polls from "@/pages/polls";
 import Profile from "@/pages/profile";
 import Contacts from "@/pages/contacts";
 import NotFound from "@/pages/404";
+import { fetchMockApplications } from "@/pages/my-applications/model/applicationsStore.js";
 
 const normalizePath = (path) => {
     if (path === "/" || path === "*") return path;
@@ -48,7 +49,7 @@ const applicationsRoute = createRoute({
     getParentRoute: () => appLayoutRoute,
     path: normalizePath(ROUTES.applications.path),
     component: MyApplications,
-    loader: async () => null,
+    loader: async () => fetchMockApplications(),
 });
 
 const accountRoute = createRoute({

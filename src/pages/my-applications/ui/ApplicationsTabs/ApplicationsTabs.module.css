@@ -19,3 +19,8 @@
     color: #56595F;
     border-bottom: 3px solid #4F5B53
 }
+
+.active {
+    color: #56595F;
+    border-bottom: 3px solid #4F5B53;
+}

@@ -9,7 +9,7 @@ const MyApplication = (props) => {
         id = '854 541',
         name = "Установка посудомоечной машины",
         status = 'active',
-        date = '',
+        date = '18:45 • 26 сентября 2020',
         managerName = 'Виктор Г.',
         managerRole = 'менеджер'
     } = props;
@@ -28,7 +28,7 @@ const MyApplication = (props) => {
 
                 </div>
                 <div className={styles.application__date}>
-                    18:45 • 26 сентября 2020
+                    {date}
                 </div>
             </article>
         </li>

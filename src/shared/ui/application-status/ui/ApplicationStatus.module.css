@@ -31,6 +31,10 @@
     background-color: #23C47B;
 }
 
+.closed {
+    background-color: #6C757D;
+}
+
 /* На случай неизвестного статуса */
 .unknown {
     background-color: #9E9E9E;

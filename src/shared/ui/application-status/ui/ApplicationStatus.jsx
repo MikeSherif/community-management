@@ -18,6 +18,10 @@ const statusMap = {
         text: 'Активная',
         className: styles.active,
     },
+    closed: {
+        text: 'Закрыта',
+        className: styles.closed,
+    },
 };
 
 const ApplicationStatus = ({ status }) => {
