@@ -1,9 +1,10 @@
 import React from 'react';
+import ProfileEditForm from "@/features/profile-edit/ui/ProfileEditForm.jsx";
 
 const Profile = () => {
     return (
         <section>
-            <h2>Профиль</h2>
+            <ProfileEditForm/>
         </section>
     );
 };
