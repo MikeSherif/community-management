@@ -1,0 +1,12 @@
+.documents {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .documents {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+    }
+}
