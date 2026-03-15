@@ -80,6 +80,15 @@ export const ROUTES = {
         },
     },
 
+    paymentHistory: {
+        path: "/payment-history",
+        title: "История платежей",
+        seo: {
+            title: "История платежей — Community Management",
+            description: "История оплат и платежей",
+        },
+    },
+
     notFound: {
         path: "*",
         title: "Страница не найдена",

@@ -1,0 +1,15 @@
+.history {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.history__title {
+    color: #56595F66;
+    font-weight: var(--font-weight-bold);
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0;
+    vertical-align: middle;
+    padding-left: 15px;
+}

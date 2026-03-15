@@ -20,6 +20,7 @@ import Profile from "@/pages/profile";
 import Contacts from "@/pages/contacts";
 import NotFound from "@/pages/404";
 import { fetchMockApplications } from "@/pages/my-applications/model/applicationsStore.js";
+import PaymentHistory from "@/pages/payment-history";
 
 const normalizePath = (path) => {
     if (path === "/" || path === "*") return path;
@@ -94,6 +95,13 @@ const contactsRoute = createRoute({
     loader: async () => null,
 });
 
+const paymentHistoryRoute = createRoute({
+    getParentRoute: () => appLayoutRoute,
+    path: normalizePath(ROUTES.paymentHistory.path),
+    component: PaymentHistory,
+    loader: async () => null,
+});
+
 const loginRoute = createRoute({
     getParentRoute: () => rootRoute,
     path: normalizePath(ROUTES.login.path),
@@ -109,19 +117,20 @@ const notFoundRoute = createRoute({
 });
 
 const routeTree = rootRoute.addChildren([
-    appLayoutRoute.addChildren([
-        dashboardRoute,
-        applicationsRoute,
-        accountRoute,
-        documentsRoute,
-        conciergeRoute,
-        pollsRoute,
-        profileRoute,
-        contactsRoute,
-    ]),
-    loginRoute,
-    notFoundRoute,
-]);
+        appLayoutRoute.addChildren([
+            dashboardRoute,
+            applicationsRoute,
+            accountRoute,
+            documentsRoute,
+            conciergeRoute,
+            pollsRoute,
+            profileRoute,
+            contactsRoute,
+            paymentHistoryRoute,
+        ]),
+        loginRoute,
+        notFoundRoute,
+    ]);
 
 const router = createRouter({
     routeTree,

@@ -2,10 +2,13 @@
 import React, { useState } from 'react';
 import styles from './Debt.module.css';
 import { DebtIcon } from '@/shared/ui/icons.jsx';
+import { useNavigate } from "@tanstack/react-router";
+import { ROUTES } from "@/app/router/routes.js";
 
 const Debt = () => {
     const [isPaid, setIsPaid] = useState(false);
     const [amount, setAmount] = useState(1890);
+    const navigate = useNavigate();
 
     const handlePayClick = () => {
         // Здесь в реальном проекте будет вызов API / zustand-действие
@@ -43,7 +46,11 @@ const Debt = () => {
                         {isPaid ? 'Оплачено' : 'Оплатить'}
                     </button>
 
-                    <button className={styles.debt__tab} disabled={isPaid}>
+                    <button
+                        className={styles.debt__tab}
+                        disabled={isPaid}
+                        onClick={() => navigate({ to: ROUTES.paymentHistory.path })}
+                    >
                         История
                     </button>
                 </div>

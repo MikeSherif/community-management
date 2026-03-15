@@ -13,7 +13,7 @@
     box-sizing: border-box;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .wrapper {
         width: 100%;
         flex-direction: column;

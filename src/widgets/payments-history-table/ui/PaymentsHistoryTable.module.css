@@ -1,0 +1,74 @@
+.wrapper {
+    width: 100%;
+}
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.table th,
+.table td {
+    padding: 16px 15px;
+    position: relative;
+}
+
+.table th {
+    color: #56595F;
+    font-weight: var(--font-weight-bold);
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0;
+    vertical-align: middle;
+}
+
+.table th:first-child {
+    padding: 16px 15px 16px 0;
+}
+
+.thead__text {
+    padding: 3px 20px;
+    width: 100%;
+    background: #F9F9FA;
+    border-radius: 10px;
+    text-align: center;
+}
+
+thead th:first-child .thead__text{
+    text-align: left;
+}
+
+.table td {
+    color: #56595F;
+    font-weight: var(--font-weight-medium);
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0;
+    vertical-align: middle;
+
+}
+
+.table th:not(:last-child)::after,
+.table td:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 0.5px;
+    background: #CACACA;
+}
+
+.table tbody td::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: 0;
+    border-bottom: 0.5px solid #CACACA;
+}
+
+.date, .amount {
+    text-align: center;
+}
