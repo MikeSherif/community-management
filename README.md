@@ -1,16 +1,49 @@
-# React + Vite
+# Community Management
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Панель управления для сервиса community management: мониторинг, заявки, документы, профиль и другие разделы.
 
-Currently, two official plugins are available:
+## Стек
+- `Vite` + `React` (JS)
+- `@tanstack/react-router` для роутинга
+- `@tanstack/react-query` для серверного состояния
+- `zustand` для локального состояния
+- `react-hook-form` + `yup` для форм и валидации
+- `react-helmet-async` для SEO-мета
+- `react-imask` для масок ввода
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Архитектура
+Проект организован по FSD (Feature-Sliced Design):
+- `src/app` — инициализация приложения, роутинг, провайдеры, лейауты
+- `src/pages` — страницы (UI + model + index)
+- `src/features` — прикладные сценарии (например, формы)
+- `src/entities` — доменные сущности
+- `src/widgets` — крупные виджеты интерфейса
+- `src/shared` — общие компоненты, стили, утилиты
 
-## React Compiler
+## Стили
+- Базовый шрифт: `Tilda Sans`
+- Глобальные переменные и веса шрифта: `src/shared/style/variables.css`
+- Подключение шрифтов: `src/shared/style/fonts.css`
+- Базовые стили: `src/shared/style/style.css`
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## Скрипты
+```bash
+npm run dev
+npm run build
+npm run lint
+npm run preview
+```
 
-## Expanding the ESLint configuration
+## Роутинг
+Маршруты и SEO-описания централизованы в:
+- `src/app/router/routes.js`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Запуск
+```bash
+npm install
+npm run dev
+```
+
+## Примечания
+- Проект использует JavaScript (без TypeScript).
+- Если меняете маршруты, обновляйте `routes.js` и связанные компоненты.
