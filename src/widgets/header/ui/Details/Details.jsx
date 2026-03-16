@@ -14,7 +14,6 @@ const Details = (props) => {
                     Счет • Дом
                 </p>
             </div>
-            <ArrowIcon/>
         </li>
     );
 };

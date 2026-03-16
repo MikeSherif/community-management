@@ -74,6 +74,31 @@ const ProfileEditForm = () => {
     return (
         <form className={styles.form} onSubmit={handleSubmit(onSubmit)} noValidate>
             <div className={styles.row}>
+                <div className={`${styles.field} ${errors.personalAccount ? styles.fieldError : ''}`}>
+                    <label htmlFor="personalAccount">Лицевой счет</label>
+                    <input
+                        id="personalAccount"
+                        {...register('personalAccount')}
+                        placeholder="13455794"
+                        className={styles.input}
+                        aria-invalid={Boolean(errors.personalAccount)}
+                    />
+                </div>
+
+                <div className={`${styles.field} ${errors.password ? styles.fieldError : ''}`}>
+                    <label htmlFor="password">Пароль</label>
+                    <input
+                        id="password"
+                        type="password"
+                        {...register('password')}
+                        placeholder="Новый пароль (если меняете)"
+                        className={styles.input}
+                        aria-invalid={Boolean(errors.password)}
+                    />
+                </div>
+            </div>
+
+            <div className={styles.row}>
                 <div className={`${styles.field} ${errors.firstName ? styles.fieldError : ''}`}>
                     <label htmlFor="firstName">Ваше имя</label>
                     <input
@@ -151,65 +176,41 @@ const ProfileEditForm = () => {
                     />
                 </div>
 
-                <div
-                    className={`${styles.field} ${styles.field__avatar} ${
-                        errors.avatar ? styles.fieldError : ''
-                    }`}
-                >
-                    <div className={styles.labelWrapper}>
-                        <label>Фотография</label>
-                        <input
-                            type="file"
-                            accept="image/jpeg,image/png,image/webp"
-                            onChange={handleFileChange}
-                            className={styles.fileInput}
-                            id="avatar"
-                        />
-                        <label htmlFor="avatar" className={styles.fileLabel}>
-                            Загрузить фото
-                        </label>
-                    </div>
+                {/*<div*/}
+                {/*    className={`${styles.field} ${styles.field__avatar} ${*/}
+                {/*        errors.avatar ? styles.fieldError : ''*/}
+                {/*    }`}*/}
+                {/*>*/}
+                {/*    <div className={styles.labelWrapper}>*/}
+                {/*        <label>Фотография</label>*/}
+                {/*        <input*/}
+                {/*            type="file"*/}
+                {/*            accept="image/jpeg,image/png,image/webp"*/}
+                {/*            onChange={handleFileChange}*/}
+                {/*            className={styles.fileInput}*/}
+                {/*            id="avatar"*/}
+                {/*        />*/}
+                {/*        <label htmlFor="avatar" className={styles.fileLabel}>*/}
+                {/*            Загрузить фото*/}
+                {/*        </label>*/}
+                {/*    </div>*/}
 
-                    <div className={styles.avatarWrapper}>
-                        {avatarPreview instanceof File ? (
-                            <img
-                                src={URL.createObjectURL(avatarPreview)}
-                                alt="Превью"
-                                className={styles.preview}
-                            />
-                        ) : (
-                            <div className={styles.placeholder}><ProfileIcon/></div>
-                        )}
+                {/*    <div className={styles.avatarWrapper}>*/}
+                {/*        {avatarPreview instanceof File ? (*/}
+                {/*            <img*/}
+                {/*                src={URL.createObjectURL(avatarPreview)}*/}
+                {/*                alt="Превью"*/}
+                {/*                className={styles.preview}*/}
+                {/*            />*/}
+                {/*        ) : (*/}
+                {/*            <div className={styles.placeholder}><ProfileIcon/></div>*/}
+                {/*        )}*/}
 
 
-                    </div>
-                </div>
+                {/*    </div>*/}
+                {/*</div>*/}
             </div>
 
-            <div className={styles.row}>
-                <div className={`${styles.field} ${errors.personalAccount ? styles.fieldError : ''}`}>
-                    <label htmlFor="personalAccount">Лицевой счет</label>
-                    <input
-                        id="personalAccount"
-                        {...register('personalAccount')}
-                        placeholder="13455794"
-                        className={styles.input}
-                        aria-invalid={Boolean(errors.personalAccount)}
-                    />
-                </div>
-
-                <div className={`${styles.field} ${errors.password ? styles.fieldError : ''}`}>
-                    <label htmlFor="password">Пароль</label>
-                    <input
-                        id="password"
-                        type="password"
-                        {...register('password')}
-                        placeholder="Новый пароль (если меняете)"
-                        className={styles.input}
-                        aria-invalid={Boolean(errors.password)}
-                    />
-                </div>
-            </div>
 
             <div className={styles.actions}>
                 <button
