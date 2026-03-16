@@ -3,9 +3,18 @@ import styles from './PollsTabs.module.css';
 
 const PollsTabs = () => {
     return (
-        <div>
-            
-        </div>
+        <ul className={styles.tabs}>
+            <li
+                className={`${styles.tab} `}
+            >
+                Актуальные
+            </li>
+            <li
+                className={`${styles.tab} `}
+            >
+                История опросов
+            </li>
+        </ul>
     );
 };
 

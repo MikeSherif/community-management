@@ -1,0 +1,14 @@
+.voted {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+
+    color: #56595F;
+    font-weight: var(--font-weight-medium);
+    font-size: 13px;
+    line-height: 100%;
+    letter-spacing: 0;
+    vertical-align: middle;
+
+}

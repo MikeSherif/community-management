@@ -1,11 +1,13 @@
 import React from 'react';
-import PollCard from "@/entities/poll-card/ui/PollCard.jsx";
+import PollsTabs from "@/pages/polls/ui/PollsTabs/PollsTabs.jsx";
+import PollsList from "@/pages/polls/ui/PollsList/PollsList.jsx";
+import styles from './Polls.module.css'
 
 const Polls = () => {
     return (
-        <section>
-            <h2>Опросы</h2>
-            <PollCard/>
+        <section className={styles.polls}>
+            <PollsTabs/>
+            <PollsList/>
         </section>
     );
 };

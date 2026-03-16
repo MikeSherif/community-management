@@ -52,8 +52,7 @@ const Hero = () => {
             </div>
             <div className={styles.hero__right}>
                 <Debt/>
-                <Debt/>
-                <Debt/>
+
             </div>
         </div>
     );

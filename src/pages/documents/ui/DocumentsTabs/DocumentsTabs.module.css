@@ -8,6 +8,7 @@
 .tab {
     position: relative;
     color: #56595F66;
+    font-size: 20px;
     font-weight: var(--font-weight-bold);
     padding-bottom: 3px;
     cursor: pointer;

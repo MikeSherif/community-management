@@ -9,6 +9,24 @@
 .card__image_wrapper {
     height: 100%;
     width: 250px;
+    border-radius: 20px;
+}
+
+.voted {
+    width: fit-content;
+    margin: 12px 0 0 12px;
+    padding: 5px 15px;
+    background: #23C47B;
+    border-radius: 13px;
+
+    color: white;
+    font-weight: var(--font-weight-medium);
+    font-size: 13px;
+    line-height: 14px;
+    letter-spacing: 0;
+    text-align: center;
+    vertical-align: middle;
+
 }
 
 .card__wrapper {
@@ -17,9 +35,11 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 10px;
+    padding: 15px 0;
 }
 
 .card__title {
+    max-width: 250px;
     color: #56595F;
     font-weight: var(--font-weight-bold);
     font-size: 17px;
@@ -29,6 +49,11 @@
 }
 
 .card__description {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+
     color: #56595F;
     font-weight: var(--font-weight-medium);
     font-size: 13px;

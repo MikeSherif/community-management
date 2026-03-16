@@ -11,7 +11,7 @@ const Details = (props) => {
             <div className={styles.details__wrapper}>
                 <ProfileIcon />
                 <p className={styles.details__text}>
-                    Счет • Дом
+                    111111 • Дом
                 </p>
             </div>
         </li>
