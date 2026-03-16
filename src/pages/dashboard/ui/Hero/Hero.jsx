@@ -3,6 +3,8 @@ import History from "@/pages/dashboard/ui/History/History.jsx";
 import styles from './Hero.module.css'
 import Debt from "@/entities/debt";
 import RequestFormModal from "@/widgets/request-form-modal/index.js";
+import HeroPollCard from "@/pages/dashboard/ui/Hero/HeroPollCard/HeroPollCard.jsx";
+import HeroBookingCard from "@/pages/dashboard/ui/Hero/HeroBookingCard/HeroBookingCard.jsx";
 const Hero = () => {
     const [isOpen, setIsOpen] = React.useState(false);
 
@@ -52,7 +54,8 @@ const Hero = () => {
             </div>
             <div className={styles.hero__right}>
                 <Debt/>
-
+                <HeroPollCard/>
+                <HeroBookingCard/>
             </div>
         </div>
     );
