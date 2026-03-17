@@ -37,16 +37,30 @@
     padding: 20px;
     border-radius: 35px;
     height: 120px;
+    border: 3px solid transparent;
     cursor: pointer;
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1) all;
 }
 
-.action:first-child {
 
+.action:first-child {
     background: #FF6D6D;
+}
+
+.action:first-child:hover {
+    background: #fff;
+    color: #FF6D6D;
+    border-color: #FF6D6D;
 }
 
 .action:last-child {
     background: #56595F;
+}
+
+.action:last-child:hover {
+    background: #fff;
+    color: #56595F;
+    border-color: #56595F;
 }
 
 .action__text {

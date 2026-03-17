@@ -75,12 +75,23 @@
     vertical-align: middle;
     color: #111;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    border: 1px solid transparent;
+    transition: all 0.5s cubic-bezier(.25,.8,.25,1);
 }
 
 .debt__tab.active {
     background: #289D68;
     color: #fff;
+}
+
+.debt__tab.active:hover {
+    background: #fff;
+    color:  #289D68;
+    border-color: #289D68;
+}
+
+.debt__tab:last-child:hover {
+    border-color: black;
 }
 
 .debt__tab.paid {
