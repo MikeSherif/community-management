@@ -172,6 +172,17 @@ const mockApplications = [
 
 export const fetchMockApplications = () => Promise.resolve(mockApplications);
 
+export const fetchMockApplicationById = (applicationId) => {
+    const rawId = String(applicationId ?? '');
+    const decodedId = decodeURIComponent(rawId);
+
+    const application = mockApplications.find(
+        (item) => item.id === rawId || item.id === decodedId
+    );
+
+    return Promise.resolve(application ?? null);
+};
+
 export const useApplicationsStore = create((set) => ({
     applications: [],
     activeStatus: APPLICATION_STATUSES.ALL,

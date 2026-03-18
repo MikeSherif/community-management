@@ -26,6 +26,15 @@ export const ROUTES = {
         },
     },
 
+    applicationsDetail: {
+        path: "/my-applications/$applicationId",
+        title: "Детали заявки",
+        seo: {
+            title: "Детали заявки — Community Management",
+            description: "Просмотр конкретной заявки",
+        },
+    },
+
     account: {
         path: "/account",
         title: "Лицевой счет",
@@ -68,6 +77,15 @@ export const ROUTES = {
         seo: {
             title: "Услуги — Community Management",
             description: "Услуги",
+        },
+    },
+
+    servicesDetail: {
+        path: "/services/$serviceId",
+        title: "Детали услуги",
+        seo: {
+            title: "Детали услуги — Community Management",
+            description: "Подробная информация об услуге",
         },
     },
 

@@ -25,6 +25,14 @@
     vertical-align: middle;
 }
 
+.application__nameLink {
+    text-decoration: none;
+}
+
+.application__nameLink:hover .application__name {
+    color: #2f353c;
+}
+
 .accent {
     font-weight: var(--font-weight-bold);
 }

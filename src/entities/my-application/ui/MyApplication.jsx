@@ -3,6 +3,8 @@ import styles from './MyApplication.module.css';
 import ApplicationManager from "@/shared/ui/application-manager";
 import ApplicationStatus from "@/shared/ui/application-status";
 import ChatMessengerLink from "@/entities/my-application/ui/ChatMessengerLink/ChatMessengerLink.jsx";
+import { Link } from "@tanstack/react-router";
+import { ROUTES } from "@/app/router/routes.js";
 
 const MyApplication = (props) => {
     const {
@@ -18,7 +20,13 @@ const MyApplication = (props) => {
             <article className={styles.application}>
                 <div className={styles.application__content}>
                     <div className={styles.application__content_wrapper}>
-                        <span className={styles.application__name}>Заявка {id} <span className={styles.accent}>• {name}</span></span>
+                        <Link
+                            to={`${ROUTES.applications.path}/$applicationId`}
+                            params={{ applicationId: String(id) }}
+                            className={styles.application__nameLink}
+                        >
+                            <span className={styles.application__name}>Заявка {id} <span className={styles.accent}>• {name}</span></span>
+                        </Link>
                         <div className={styles.application__wrapper}>
                             <ApplicationStatus status={status}/>
                             <ApplicationManager managerName={managerName} managerRole={managerRole}/>
