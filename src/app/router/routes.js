@@ -62,6 +62,15 @@ export const ROUTES = {
         },
     },
 
+    services: {
+        path: "/services",
+        title: "Услуги",
+        seo: {
+            title: "Услуги — Community Management",
+            description: "Услуги",
+        },
+    },
+
     profile: {
         path: "/profile",
         title: "Профиль",

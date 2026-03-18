@@ -1,0 +1,29 @@
+.service {
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px 30px;
+    border-radius: 30px;
+    background: #EDE6D6;
+    backdrop-filter: blur(8px);
+    color: #1A2521;
+    cursor: pointer;
+    transition: 0.3s cubic-bezier(0.2, 0.2, 0.2, 1) all;
+}
+
+.service:hover {
+    background: #1A2521E8;
+    color: #fff;
+    transition: 0.3s cubic-bezier(0.2, 0.2, 0.2, 1) all;
+}
+
+.service__title {
+    font-weight: var(--font-weight-light);
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0;
+    align-self: flex-end;
+}
