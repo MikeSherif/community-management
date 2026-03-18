@@ -191,5 +191,6 @@
 @media (max-width: 768px) {
     .totalButton {
         font-size: 12px;
+        padding: 0 12px;
     }
 }
