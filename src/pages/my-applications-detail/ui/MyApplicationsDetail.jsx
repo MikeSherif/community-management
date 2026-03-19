@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './MyApplicationsDetail.module.css';
 import ApplicationStatus from "@/shared/ui/application-status/index.js";
 import ApplicationInfo from "@/widgets/application-info";
+import ApplicationHistory from "@/widgets/application-history/ui/ApplicationHistory.jsx";
 
 
 
@@ -24,6 +25,7 @@ const MyApplicationsDetail = () => {
             </div>
             <div className={styles.detail__body}>
                 <ApplicationInfo/>
+                <ApplicationHistory/>
             </div>
         </section>
     );

@@ -1,0 +1,56 @@
+.message {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.content {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    background: #56595F;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 18px;
+}
+
+.bubble {
+    max-width: 400px;
+    width: fit-content;
+    color: #fff;
+    font-weight: var(--font-weight-regular);
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.meta {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.name {
+    color: #56595F80;
+    font-weight: var(--font-weight-bold);
+    font-size: 13px;
+    line-height: 15.6px;
+    letter-spacing: 0;
+    vertical-align: middle;
+}
+
+.date {
+    color: #56595F80;
+    font-weight: var(--font-weight-regular);
+    font-size: 11px;
+    line-height: 16.5px;
+    letter-spacing: 0;
+    vertical-align: middle;
+}

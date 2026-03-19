@@ -1,0 +1,14 @@
+.history {
+    display: flex;
+    flex-direction: column;
+}
+
+.history__title {
+    color: #56595F;
+    font-weight: var(--font-weight-medium);
+    font-size: 19.4px;
+    line-height: 24px;
+    letter-spacing: 0;
+    vertical-align: middle;
+    padding-bottom: 40px;
+}
