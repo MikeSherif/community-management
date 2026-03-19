@@ -5,6 +5,7 @@ import Manager from "@/widgets/application-info/ui/Manager/Manager.jsx";
 import Date from "@/widgets/application-info/ui/Date/Date.jsx";
 import Telephone from "@/widgets/application-info/ui/Telephone/Telephone.jsx";
 import Address from "@/widgets/application-info/ui/Address/Address.jsx";
+import Actions from "@/widgets/application-info/ui/Actions/Actions.jsx";
 
 const ApplicationInfo = () => {
     return (
@@ -14,6 +15,7 @@ const ApplicationInfo = () => {
             <Date/>
             <Telephone/>
             <Address/>
+            <Actions/>
         </div>
     );
 };

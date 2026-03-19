@@ -1,0 +1,58 @@
+.actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.check {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.check__name {
+    color: #212529;
+    font-weight: var(--font-weight-medium);
+    font-size: 13px;
+    line-height: 19.5px;
+    letter-spacing: 0;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    padding: 10px 24px;
+}
+
+.cancel__btn {
+    color: #fff;
+    background-color: #56595F;
+}
+
+.appeal__btn {
+    color: #56595F99;
+    background-color: #E5E5E5;
+}
+
+.btn__text {
+    font-weight: var(--font-weight-medium);
+    font-size: 13px;
+    line-height: 19.5px;
+    letter-spacing: 0;
+    text-align: center;
+    vertical-align: middle;
+}
