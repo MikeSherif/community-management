@@ -1,21 +1,23 @@
 import React from 'react';
 import styles from './Message.module.css';
 
-const Message = () => {
+const Message = (props) => {
+    const {
+        messageText = 'Текст сообщения. Может быть длинный, может короткий.',
+        managerName = 'Иван Иванов',
+        messageTime = '12:41'
+    } = props;
     return (
         <article className={styles.message}>
             <div className={styles.content}>
                 <div className={styles.bubble}>
-                    Текст сообщения. Может быть длинный, может
-                    Текст сообщения. Может быть длинный, может короткий.
-                    Текст сообщения. Может быть длинный, может короткий.
-                    Текст сообщения. Может быть длинный, может короткий.
+                    {messageText}
                 </div>
             </div>
 
             <div className={styles.meta}>
-                <span className={styles.name}>Иван Иванов</span>
-                <span className={styles.date}>Сегодня 12:41</span>
+                <span className={styles.name}>{managerName}</span>
+                <span className={styles.date}>Сегодня {messageTime}</span>
             </div>
         </article>
     );

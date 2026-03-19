@@ -6,10 +6,10 @@ const Messages = () => {
     return (
         <ul className={styles.messages}>
             <li>
-                <Message/>
+                <Message messageText={'Здравствуйте! Ваша завка принята. Мы свяжемся с вами в ближайшее время в мессенджере.'}/>
             </li>
             <li>
-                <Message/>
+                <Message messageText={'К вам направлена спасательная бригада. Ожидайте сегодня сегодня до 12:00'}/>
             </li>
             <li>
                 <Message/>
