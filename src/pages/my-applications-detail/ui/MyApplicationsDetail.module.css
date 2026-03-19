@@ -47,5 +47,9 @@
     font-size: 13px;
     letter-spacing: 0;
     vertical-align: middle;
+}
 
+.detail__body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }

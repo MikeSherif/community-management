@@ -1,0 +1,32 @@
+.comment {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #DEE2E6;
+}
+
+.comment__title {
+    color: #56595F;
+    font-weight: var(--font-weight-medium);
+    font-size: 19.8px;
+    line-height: 24px;
+    letter-spacing: 0;
+    vertical-align: middle;
+}
+
+.comment__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+}
+
+.comment__text {
+    color: #56595F;
+    font-weight: var(--font-weight-regular);
+    font-size: 14px;
+    line-height: 21.98px;
+    letter-spacing: 0;
+    vertical-align: middle;
+}

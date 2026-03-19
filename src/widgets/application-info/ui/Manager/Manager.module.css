@@ -1,0 +1,43 @@
+.manager {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    padding: 25px 0;
+    border-bottom: 1px solid #DEE2E6;
+}
+
+.manager__avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-image: url("/assets/img/manager.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.manager__info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.manager__label {
+    color: #56595F99;
+    font-weight: var(--font-weight-medium);
+    font-size: 13.8px;
+    line-height: 16.8px;
+    letter-spacing: 0;
+    vertical-align: middle;
+}
+
+.manager__name {
+    color: #56595F;
+    font-weight: var(--font-weight-bold);
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0;
+    vertical-align: middle;
+}

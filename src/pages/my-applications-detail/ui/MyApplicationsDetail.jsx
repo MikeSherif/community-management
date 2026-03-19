@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './MyApplicationsDetail.module.css';
 import ApplicationStatus from "@/shared/ui/application-status/index.js";
+import ApplicationInfo from "@/widgets/application-info";
+
 
 
 const MyApplicationsDetail = () => {
@@ -21,7 +23,7 @@ const MyApplicationsDetail = () => {
                 </div>
             </div>
             <div className={styles.detail__body}>
-
+                <ApplicationInfo/>
             </div>
         </section>
     );
