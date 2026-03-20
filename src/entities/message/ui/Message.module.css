@@ -54,3 +54,11 @@
     letter-spacing: 0;
     vertical-align: middle;
 }
+
+@media (max-width: 576px) {
+    .bubble {
+        max-width: 250px;
+        font-size: 10px;
+        line-height: 15px;
+    }
+}

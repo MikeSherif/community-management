@@ -57,3 +57,19 @@
     border-top: 1px solid #DEE2E6;
     padding-top:25px;
 }
+
+@media (max-width: 1200px) {
+    .detail__body {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .detail__header {
+        gap: 10px;
+    }
+    .info__title {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+}
