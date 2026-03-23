@@ -19,7 +19,7 @@ ymaps {
 
 @media (max-width: 1200px) {
     .mapWrap {
-        grid-column: span 5;
+        grid-column: span 1;
         min-height: 300px;
     }
 }

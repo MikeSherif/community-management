@@ -115,4 +115,14 @@
     .location {
         grid-template-columns: 1fr;
     }
+
+    .location__detals {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .location {
+        padding: 12px;
+    }
 }

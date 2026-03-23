@@ -36,3 +36,13 @@
     line-height: 120%;
     letter-spacing: 0;
 }
+
+@media (max-width: 992px) {
+    .contacts__header {
+        gap: 15px;
+    }
+
+    .contacts__header_wrapper {
+        gap: 10px;
+    }
+}

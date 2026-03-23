@@ -38,3 +38,14 @@
     width: 100%;
     background: #DBDBDB;
 }
+
+@media (max-width: 768px) {
+    .schedule__list {
+        grid-template-columns: repeat(7, minmax(45px, 1fr));
+        gap: 4px;
+    }
+
+    .schedule__item {
+        padding: 5px 0;
+    }
+}
