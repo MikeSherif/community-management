@@ -28,6 +28,7 @@ ymaps {
     .mapWrap {
         min-height: 240px;
         border-radius: 18px;
+        max-width: 100dvw;
     }
 
     .mapWrap :global(.ymaps-2-1-79-map) {
