@@ -27,7 +27,7 @@ ymaps {
 @media (max-width: 768px) {
     .mapWrap {
         min-height: 240px;
-        border-radius: 26px;
+        border-radius: 36px;
         max-width: 100dvw;
     }
 
