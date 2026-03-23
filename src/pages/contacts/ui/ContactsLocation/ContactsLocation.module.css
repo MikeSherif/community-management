@@ -1,0 +1,118 @@
+.location {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 24px;
+    padding: 15px 25px;
+    border: 1px solid transparent;
+    border-radius: 55px;
+    background:
+            linear-gradient(#fff, #fff) padding-box,
+            linear-gradient(89.62deg, #F1ECEC 0.34%, rgba(241, 236, 236, 0) 114.48%) border-box;
+}
+
+.location__detals {
+    grid-column: span 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 20px 0;
+}
+
+.location__address {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    font-style: normal;
+}
+
+.region {
+    color: #62675D;
+    font-weight: var(--font-weight-regular);
+    font-size: 16.08px;
+    line-height: 120%;
+    letter-spacing: 0;
+}
+
+.street {
+    color: #232221;
+    font-weight: var(--font-weight-regular);
+    font-size: 22.97px;
+    line-height: 120%;
+    letter-spacing: 0;
+}
+
+.button__map {
+    width: fit-content;
+    display: inline-flex;
+    border-bottom: 1px solid transparent;
+    background: none;
+
+    color: #62675D;
+    font-weight: var(--font-weight-medium);
+    font-size: 12px;
+    line-height: 140%;
+    letter-spacing: 0;
+    cursor: pointer;
+    text-decoration: none;
+
+    transition: 0.3s all cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.button__map:hover {
+    border-bottom: 1px solid #62675D;
+}
+
+.location__info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.administrator {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.administrator__avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-image: url("/assets/img/manager.png");
+}
+
+.administrator__info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.administrator__name {
+    color: #27314A;
+    font-weight: var(--font-weight-regular);
+    font-size: 12px;
+    line-height: 120%;
+    letter-spacing: 0;
+}
+
+.administrator__tel {
+    color: #27314A;
+    font-weight: var(--font-weight-medium);
+    font-size: 16px;
+    line-height: 110.00000000000001%;
+    letter-spacing: 0;
+}
+
+@media (max-width: 1200px) {
+    .location {
+        grid-template-columns: 1fr;
+    }
+}

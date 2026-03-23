@@ -2,3 +2,7 @@ html,
 body {
     font-family: var(--font-family-base);
 }
+
+.ymaps-2-1-79-copyright, .ymaps-2-1-79-gotoymaps, .ymaps-2-1-79-gototaxi, .ymaps-2-1-79-gototech {
+    display: none !important;
+}

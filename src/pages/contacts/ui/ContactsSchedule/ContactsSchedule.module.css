@@ -1,0 +1,40 @@
+.schedule__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(62px, 1fr));
+    gap: 6px;
+}
+
+.schedule__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background: #EDE6D6;
+    border-radius: 10px;
+    padding: 10px 5px;
+
+    color: #27314A;
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+.schedule__day {
+    font-weight: var(--font-weight-regular);
+}
+
+.schedule__time {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    font-weight: var(--font-weight-medium);
+}
+
+.schedule__item .schedule__time:last-child::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background: #DBDBDB;
+}
